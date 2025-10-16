@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-header d-flex align-items-center justify-content-between">
         <div class="card-title">Severity Overview</div>
-        <button class="btn btn-black">Refresh</button>
+        <button class="btn bg-light"><i class="icon-refresh"></i>&nbsp;Refresh</button>
     </div>
     <div class="card-body">
         <div class="p-3">
@@ -26,7 +26,7 @@
                     <span
                         class="text-muted fw-normal">{{ $high['unresolved'] > 0 ? $high['unresolved'] . '/' . $high['total'] : '' }}</span>
                 </div>
-                <p class="text-muted">High-priority breaches requiring immediate attention</p>
+                <p class="text-muted">Significant breaches requiring attention</p>
             </div>
             <hr class="text-muted" />
             <div>
@@ -38,7 +38,7 @@
                     <span
                         class="text-muted fw-normal">{{ $moderate['unresolved'] > 0 ? $moderate['unresolved'] . '/' . $moderate['total'] : '' }}</span>
                 </div>
-                <p class="text-muted">High-priority breaches requiring immediate attention</p>
+                <p class="text-muted">Moderate breaches to monitor</p>
             </div>
             <hr class="text-muted" />
             <div>
@@ -50,7 +50,7 @@
                     <span
                         class="fw-normal">{{ $low['unresolved'] > 0 ? $low['unresolved'] . '/' . $low['total'] : '' }}</span>
                 </div>
-                <p class="text-muted">High-priority breaches requiring immediate attention</p>
+                <p class="text-muted">Minor breaches with low impact</p>
             </div>
             <hr class="text-muted" />
         </div>

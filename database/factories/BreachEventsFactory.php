@@ -13,6 +13,17 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class BreachEventsFactory extends Factory
 {
     protected $model = BreachEvent::class;
+
+    const defaultSources = [
+        'Facebook',
+        'Google',
+        'Gmail',
+        'Github',
+        'Twitter',
+        'Linkedin',
+        'Dropbox',
+        'GDrive'
+    ];
     /**
      * Define the model's default state.
      *
@@ -22,7 +33,7 @@ class BreachEventsFactory extends Factory
     {
         return [
             'identity_id' => Identity::inRandomOrder()->first()->id,
-            'source' => $this->faker->url(),
+            'source' => $this->faker->randomElement(self::defaultSources),
             'reported_on' => $this->faker->dateTimeBetween('-1 year', 'now'),
             'severity' => $this->faker->randomElement(['L', 'M', 'H', 'C']), //L:Low, M:Medium, H:High, C:Critical
             'status' => $this->faker->randomElement(['R', 'U']), //R:Resolved, U:Unresolved

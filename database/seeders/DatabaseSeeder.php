@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(LeakedDataTypesSeeder::class);
         Identity::factory()->count(5)->domain()->create();
         Identity::factory()->count(5)->individual()->create();
-        BreachEvent::factory()->count(10)->create();
+        BreachEvent::factory()->count(4000)->create();
     }
 }

@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div>
-                <button class="btn btn-black">Manage Identities</button>
+                <button class="btn bg-light"><i class="icon-settings"></i>&nbsp;Manage Identities</button>
             </div>
         </div>
     </div>

@@ -8,7 +8,8 @@
                     </div>
                     <div>
                         <h5 class="fs-5 fw-bold m-0 p-0">Resolution Progress</h5>
-                        <p class="text-muted">Based on breach resolution progress. 289 of 312 breaches resolved.</p>
+                        <p class="text-muted">Based on breach resolution progress. {{ $resolvedCount }} of
+                            {{ $totalRecords }} breaches resolved.</p>
                     </div>
                 </div>
                 <hr class="text-muted" />
