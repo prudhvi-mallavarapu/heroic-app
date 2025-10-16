@@ -42,7 +42,7 @@
         <div class="card">
             <div class="card-body d-flex align-items-center justify-content-between">
                 <div class="flex">
-                    <h3 class="h3 mb-0">2714</h3>
+                    <h3 class="h3 mb-0">{{ $totalRecords }}</h3>
                     <p class="text-muted p-0 m-0">Total Records</p>
                     <p class="text-danger p-0 m-0">+12% from last quarter</p>
                 </div>
@@ -58,7 +58,7 @@
         <div class="card">
             <div class="card-body d-flex align-items-center justify-content-between">
                 <div class="flex">
-                    <h3 class="h3 mb-0">2714</h3>
+                    <h3 class="h3 mb-0">{{ $uniqueIdentities }}</h3>
                     <p class="text-muted p-0 m-0">Unique Identities</p>
                     <p class="text-muted p-0 m-0">-54% saturation</p>
                 </div>
@@ -74,7 +74,7 @@
         <div class="card">
             <div class="card-body d-flex align-items-center justify-content-between">
                 <div class="flex">
-                    <h3 class="h3 mb-0">2714</h3>
+                    <h3 class="h3 mb-0">{{ $discoveredEndPoints }}</h3>
                     <p class="text-muted p-0 m-0">Discoverd Endpoints</p>
                     <p class="text-danger p-0 m-0">+12% from last quarter</p>
                 </div>
@@ -90,7 +90,7 @@
         <div class="card">
             <div class="card-body d-flex align-items-center justify-content-between">
                 <div class="flex">
-                    <h3 class="h3 mb-0">2714</h3>
+                    <h3 class="h3 mb-0">{{ $totalSources }}</h3>
                     <p class="text-muted p-0 m-0">Total Sources</p>
                     <p class="text-danger p-0 m-0">+12% from last quarter</p>
                 </div>

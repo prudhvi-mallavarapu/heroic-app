@@ -2,27 +2,18 @@
     <div class="card-body">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex justify-content-start align-items-center gap-4">
-                <div class="btn-group dropdown">
-                    <button class="btn border dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                        All Identities
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a class="dropdown-item" href="#">All Identities</a>
-                        </li>
+                <div>
+                    <select class="form-select" wire:model.change="selectedIdentity">
+                        <option value="all">All Identities</option>
                         @foreach ($identities as $identity)
-                            <li>
-                                <a class="dropdown-item" href="#">{{ $identity->name }}</a>
-                            </li>
+                            <option value="{{ $identity->id }}">{{ $identity->name }}</option>
                         @endforeach
-                        <div class="dropdown-divider"></div>
-                        <li class="p-2">
-                            <a class="btn btn-primary btn-full">New Identity</a>
-                        </li>
-                    </ul>
+                    </select>
                 </div>
                 <div>
-                    <h5 class="h5 m-0"><b>Filter by Identity</b></h5>
+                    <h5 class="h5 m-0">
+                        <b>Filter by Identity {{ $selectedIdentity }}</b>
+                    </h5>
                     <span class="text-muted m-0">Filter breach data by identity</span>
                 </div>
             </div>

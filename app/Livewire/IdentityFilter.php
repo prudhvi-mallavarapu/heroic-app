@@ -7,9 +7,22 @@ use Livewire\Component;
 
 class IdentityFilter extends Component
 {
+    public $identities = [];
+    public $selectedIdentity = '';
+
+    public function mount()
+    {
+        $this->identities = Identity::select('id', 'name', 'type')->get();
+    }
+
+    public function updatedSelectedIdentity($value)
+    {
+        // Emit event to other components
+        $this->dispatch('identityChanged', identity: $value);
+    }
+
     public function render()
     {
-        $identities = Identity::select('name', 'type')->get();
-        return view('livewire.identity-filter')->with(['identities' => $identities]);
+        return view('livewire.identity-filter');
     }
 }

@@ -26,4 +26,7 @@ php artisan key:generate
 
 # Serve the application
 php artisan serve
+
+# Call DB seeds for dummy data
+php artisan db:seed
 ```

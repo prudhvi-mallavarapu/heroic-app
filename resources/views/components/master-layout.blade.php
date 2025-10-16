@@ -63,7 +63,7 @@
                     </div>
                     <!-- End Logo Header -->
                 </div>
-                @include('partials.navbar')
+                <x-navbar />
             </div>
 
             <div class="container">
@@ -85,16 +85,7 @@
                         </ul>
                     </div>
                     <div class="page-category">
-                        <livewire:identity-filter />
-                        <div class="row">
-                            <div class="col-8">
-                                <livewire:resolution-progress />
-                            </div>
-                            <div class="col-4">
-                                <livewire:severity-overview />
-                            </div>
-                        </div>
-                        <livewire:events-data-table />
+                        {{ $slot }}
                     </div>
                 </div>
             </div>
@@ -117,9 +108,6 @@
     <!-- Chart Circle -->
     <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
 
-    <!-- Datatables -->
-    <script src="assets/js/plugin/datatables/datatables.min.js"></script>
-
     <!-- Bootstrap Notify -->
     <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
@@ -138,7 +126,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("#basic-datatables").DataTable({});
             $('.select2').select2();
         });
     </script>

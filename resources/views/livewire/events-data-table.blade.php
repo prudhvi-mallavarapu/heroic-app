@@ -5,14 +5,9 @@
                 <h4 class="card-title">All Breach Events</h4>
             </div>
             <div class="card-body">
-                <div class="card-sub">
-                    Create responsive tables by wrapping any table with
-                    <code class="highlighter-rouge">.table-responsive</code>
-                    <code class="highlighter-rouge">DIV</code> to make them
-                    scroll horizontally on small devices
-                </div>
+                <div class="card-sub"></div>
                 <div class="table-responsive table-bordered">
-                    <table id="basic-datatables" class="display table table-hover">
+                    <table class="display table">
                         <thead>
                             <tr>
                                 <th>Identity</th>
@@ -45,9 +40,10 @@
                                         @endforeach
                                     </td>
                                     <td>{{ $record->endpoint }}</td>
-                                    <td><button class="btn btn-outline border">Details</button></td>
+                                    <td><button class="btn btn-black btn-border">Details</button></td>
                                 </tr>
                             @endforeach
+                            {{ $records->links('pagination::bootstrap-5') }}
                         </tbody>
                     </table>
                 </div>
