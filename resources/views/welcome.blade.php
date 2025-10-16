@@ -86,7 +86,14 @@
                     </div>
                     <div class="page-category">
                         <livewire:identity-filter />
-                        <livewire:resolution-progress />
+                        <div class="row">
+                            <div class="col-8">
+                                <livewire:resolution-progress />
+                            </div>
+                            <div class="col-4">
+                                <livewire:severity-overview />
+                            </div>
+                        </div>
                         <livewire:events-data-table />
                     </div>
                 </div>

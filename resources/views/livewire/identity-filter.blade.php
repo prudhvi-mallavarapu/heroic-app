@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-body">
-        <div class="d-flex justify-content-between align-middle">
-            <div class="d-flex justify-content-start align-middle gap-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-start align-items-center gap-4">
                 <div class="btn-group dropdown">
                     <button class="btn border dropdown-toggle" type="button" data-bs-toggle="dropdown">
                         All Identities

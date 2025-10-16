@@ -45,7 +45,7 @@
                                         @endforeach
                                     </td>
                                     <td>{{ $record->endpoint }}</td>
-                                    <td><button class="btn btn-black">Details</button></td>
+                                    <td><button class="btn btn-outline border">Details</button></td>
                                 </tr>
                             @endforeach
                         </tbody>
