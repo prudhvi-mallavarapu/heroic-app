@@ -2,7 +2,9 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">All Breach Events</h4>
+                <h4 class="card-title">
+                    All Breach Events {{ $totalRecords > 0 ? '(' . $records->count() . ')' : '' }}
+                </h4>
             </div>
             <div class="card-body">
                 <div class="card-sub"></div>
