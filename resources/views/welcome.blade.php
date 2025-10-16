@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins.min.css" />
     <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     @livewireStyles
 </head>
 
@@ -84,7 +85,9 @@
                         </ul>
                     </div>
                     <div class="page-category">
-                        <livewire:counter />
+                        <livewire:identity-filter />
+                        <livewire:resolution-progress />
+                        <livewire:events-data-table />
                     </div>
                 </div>
             </div>
@@ -125,6 +128,13 @@
 
     <!-- Kaiadmin JS -->
     <script src="assets/js/kaiadmin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#basic-datatables").DataTable({});
+            $('.select2').select2();
+        });
+    </script>
     @livewireScripts
 </body>
 
