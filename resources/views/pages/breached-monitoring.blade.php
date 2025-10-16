@@ -1,20 +1,40 @@
 <x-master-layout>
-    <livewire:identity-filter />
-    <div class="row">
-        <div class="col-8">
+    <!-- Identity Filter -->
+    <div class="mb-3">
+        <livewire:identity-filter />
+    </div>
+
+    <!-- Resolution Progress + Severity Overview -->
+    <div class="row g-3">
+        <div class="col-lg-8 col-md-12">
             <livewire:resolution-progress />
         </div>
-        <div class="col-4">
+        <div class="col-lg-4 col-md-12">
             <livewire:severity-overview />
         </div>
     </div>
-    <livewire:events-data-table />
-    <div class="row">
-        <div class="col-8">
+
+    <!-- Events Data Table -->
+    <div class="row mt-3">
+        <div class="col-12">
+            <livewire:events-data-table />
+        </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="row g-3 mt-3">
+        <div class="col-lg-8 col-md-12">
             <livewire:leaked-data-types-chart />
         </div>
-        <div class="col-4">
+        <div class="col-lg-4 col-md-12">
             <livewire:breached-sources-chart />
+        </div>
+    </div>
+
+    <!-- Breach Discovery Trend -->
+    <div class="row mt-3">
+        <div class="col-12">
+            <livewire:breach-discovery-trend />
         </div>
     </div>
 </x-master-layout>

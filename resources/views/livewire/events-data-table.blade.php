@@ -14,11 +14,6 @@
                     <table class="display table">
                         <thead>
                             <tr>
-                                <th>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" />
-                                    </div>
-                                </th>
                                 <th>Identity</th>
                                 <th>Source</th>
                                 <th>Date</th>
@@ -32,11 +27,6 @@
                         <tbody>
                             @foreach ($records as $record)
                                 <tr>
-                                    <td>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" />
-                                        </div>
-                                    </td>
                                     <td>{{ $record->identity->name }}</td>
                                     <td>{{ $record->source->name }}</td>
                                     <td class="text-nowrap">{{ $record->reported_on }}</td>
