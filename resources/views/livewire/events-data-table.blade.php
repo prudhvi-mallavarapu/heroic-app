@@ -7,11 +7,18 @@
                 </h4>
             </div>
             <div class="card-body">
-                <div class="card-sub"></div>
+                <div class="card-sub">
+                    Data Overview
+                </div>
                 <div class="table-responsive table-bordered">
                     <table class="display table">
                         <thead>
                             <tr>
+                                <th>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" />
+                                    </div>
+                                </th>
                                 <th>Identity</th>
                                 <th>Source</th>
                                 <th>Date</th>
@@ -25,20 +32,30 @@
                         <tbody>
                             @foreach ($records as $record)
                                 <tr>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" />
+                                        </div>
+                                    </td>
                                     <td>{{ $record->identity->name }}</td>
                                     <td>{{ $record->source }}</td>
                                     <td class="text-nowrap">{{ $record->reported_on }}</td>
                                     <td>
-                                        {{ \App\Models\BreachEvent::SEVERITY_LABELS[$record->severity]['label'] }}
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i
+                                                class="fas fa-circle {{ \App\Models\BreachEvent::SEVERITY_LABELS[$record->severity]['class'] }}"></i>
+                                            <span
+                                                class="{{ \App\Models\BreachEvent::SEVERITY_LABELS[$record->severity]['class'] }} fw-medium">{{ \App\Models\BreachEvent::SEVERITY_LABELS[$record->severity]['label'] }}</span>
+                                        </div>
                                     </td>
                                     <td>
-                                        {{ \App\Models\BreachEvent::STATUS_LABELS[$record->status]['label'] }}
+                                        <button
+                                            class="btn btn-sm {{ \App\Models\BreachEvent::STATUS_LABELS[$record->status]['class'] }}">{{ \App\Models\BreachEvent::STATUS_LABELS[$record->status]['label'] }}</button>
                                     </td>
                                     <td>
                                         @foreach ($record->leakedDataTypes as $dataType)
-                                            <span class="badge badge-primary">
-                                                {{ $dataType->type }}
-                                            </span>
+                                            <i
+                                                class="text-muted {{ App\Models\LeakedDataType::DataTypeIcons[$dataType->type] }}"></i>
                                         @endforeach
                                     </td>
                                     <td>{{ $record->endpoint }}</td>

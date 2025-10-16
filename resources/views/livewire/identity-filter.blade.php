@@ -12,7 +12,7 @@
                 </div>
                 <div>
                     <h5 class="h5 m-0">
-                        <b>Filter by Identity {{ $selectedIdentity }}</b>
+                        <b>Filter by Identity</b>
                     </h5>
                     <span class="text-muted m-0">Filter breach data by identity</span>
                 </div>

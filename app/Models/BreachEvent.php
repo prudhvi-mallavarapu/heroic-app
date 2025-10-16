@@ -26,15 +26,15 @@ class BreachEvent extends Model
 
     // Optional: map for labels & classes
     public const SEVERITY_LABELS = [
-        self::SEVERITY_LOW      => ['label' => 'Low', 'class' => 'badge badge-success'],
-        self::SEVERITY_MEDIUM   => ['label' => 'Medium', 'class' => 'badge badge-warning'],
-        self::SEVERITY_HIGH     => ['label' => 'High', 'class' => 'badge badge-danger'],
-        self::SEVERITY_CRITICAL => ['label' => 'Critical', 'class' => 'badge badge-dark'],
+        self::SEVERITY_LOW      => ['label' => 'Low', 'class' => 'text-muted'],
+        self::SEVERITY_MEDIUM   => ['label' => 'Medium', 'class' => 'text-warning'],
+        self::SEVERITY_HIGH     => ['label' => 'High', 'class' => 'text-danger'],
+        self::SEVERITY_CRITICAL => ['label' => 'Critical', 'class' => 'text-danger'],
     ];
 
     public const STATUS_LABELS = [
-        self::STATUS_RESOLVED   => ['label' => 'Resolved', 'class' => 'badge badge-success'],
-        self::STATUS_UNRESOLVED => ['label' => 'Unresolved', 'class' => 'badge badge-danger'],
+        self::STATUS_RESOLVED   => ['label' => 'Resolved', 'class' => 'bg-light border-0 disabled'],
+        self::STATUS_UNRESOLVED => ['label' => 'Unresolved', 'class' => 'btn-danger btn-border'],
     ];
 
     public function leakedDataTypes()

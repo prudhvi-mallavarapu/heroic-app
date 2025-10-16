@@ -6,34 +6,50 @@
     <div class="card-body">
         <div class="p-3">
             <div>
-                <p class="m-0 p-0 fw-bold fs-5 text-danger">
-                    Critical <span
+                <div class="d-flex gap-2 align-items-center">
+                    <i class="fas fa-circle text-danger"></i>
+                    <p class="m-0 p-0 fw-bold fs-5 text-danger">
+                        Critical
+                    </p>
+                    <span
                         class="text-muted fw-normal">{{ $critical['unresolved'] > 0 ? $critical['unresolved'] . '/' . $critical['total'] : '' }}</span>
-                </p>
+                </div>
                 <p class="text-muted">High-priority breaches requiring immediate attention</p>
             </div>
             <hr class="text-muted" />
             <div>
-                <p class="m-0 p-0 fw-bold fs-5 text-danger">
-                    High <span
+                <div class="d-flex gap-2 align-items-center">
+                    <i class="fas fa-circle text-danger"></i>
+                    <p class="m-0 p-0 fw-bold fs-5 text-danger">
+                        High
+                    </p>
+                    <span
                         class="text-muted fw-normal">{{ $high['unresolved'] > 0 ? $high['unresolved'] . '/' . $high['total'] : '' }}</span>
-                </p>
+                </div>
                 <p class="text-muted">High-priority breaches requiring immediate attention</p>
             </div>
             <hr class="text-muted" />
             <div>
-                <p class="m-0 p-0 fw-bold fs-5 text-warning">
-                    Medium <span
+                <div class="d-flex gap-2 align-items-center">
+                    <i class="fas fa-circle text-warning"></i>
+                    <p class="m-0 p-0 fw-bold fs-5 text-warning">
+                        Medium
+                    </p>
+                    <span
                         class="text-muted fw-normal">{{ $moderate['unresolved'] > 0 ? $moderate['unresolved'] . '/' . $moderate['total'] : '' }}</span>
-                </p>
-                <p>High-priority breaches requiring immediate attention</p>
+                </div>
+                <p class="text-muted">High-priority breaches requiring immediate attention</p>
             </div>
             <hr class="text-muted" />
             <div>
-                <p class="m-0 p-0 fw-bold fs-5 text-muted">
-                    Low <span
-                        class="text-muted fw-normal">{{ $low['unresolved'] > 0 ? $low['unresolved'] . '/' . $low['total'] : '' }}</span>
-                </p>
+                <div class="d-flex gap-2 align-items-center text-muted">
+                    <i class="fas fa-circle"></i>
+                    <p class="m-0 p-0 fw-bold fs-5">
+                        Low
+                    </p>
+                    <span
+                        class="fw-normal">{{ $low['unresolved'] > 0 ? $low['unresolved'] . '/' . $low['total'] : '' }}</span>
+                </div>
                 <p class="text-muted">High-priority breaches requiring immediate attention</p>
             </div>
             <hr class="text-muted" />
