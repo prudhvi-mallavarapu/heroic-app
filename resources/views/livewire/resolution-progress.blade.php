@@ -16,19 +16,19 @@
                 <div class="row mt-4">
                     <div class="col-12 col-sm-6 col-md-6 col-xl-4">
                         <div class="card-body bg-light text-center rounded-3">
-                            <h2 class="h2 mb-0">2714</h2>
+                            <h2 class="h2 mb-0">{{ $totalRecords }}</h2>
                             <span class="text-muted h5">Total Records</span>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-xl-4">
                         <div class="card-body bg-success-subtle text-center rounded-3">
-                            <h2 class="h2 text-success mb-0">2714</h2>
+                            <h2 class="h2 text-success mb-0">{{ $resolvedCount }}</h2>
                             <span class="text-muted h5">Resolved</span>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-6 col-xl-4">
                         <div class="card-body bg-danger-subtle text-center rounded-3">
-                            <h2 class="h2 text-danger mb-0">2714</h2>
+                            <h2 class="h2 text-danger mb-0">{{ $unresolvedCount }}</h2>
                             <span class="text-muted h5">Remaining</span>
                         </div>
                     </div>
