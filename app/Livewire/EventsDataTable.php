@@ -30,6 +30,7 @@ class EventsDataTable extends Component
         $query = BreachEvent::query()
             ->with([
                 'identity:id,name',
+                'source:id,name',
                 'leakedDataTypes:id,type'
             ]);
 

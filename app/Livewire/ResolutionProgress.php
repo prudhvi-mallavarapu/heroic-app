@@ -40,7 +40,7 @@ class ResolutionProgress extends Component
             COUNT(*) as total_records,
             COUNT(DISTINCT identity_id) as unique_identities,
             COUNT(DISTINCT endpoint) as discovered_endpoints,
-            COUNT(DISTINCT source) as total_sources,
+            COUNT(DISTINCT source_id) as total_sources,
             SUM(status = "R") as resolved_count,
             SUM(status = "U") as unresolved_count
         ')->first();

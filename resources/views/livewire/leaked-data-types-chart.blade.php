@@ -66,7 +66,8 @@
 
             // Update chart on identity change
             Livewire.on('refreshLeakedChart', data => {
-                renderChart(data[0].chartData ?? {
+                const payload = Array.isArray(data) ? data[0] : data;
+                renderChart(payload.chartData ?? {
                     labels: [],
                     counts: []
                 });

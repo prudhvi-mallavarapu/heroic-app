@@ -52,6 +52,11 @@ class BreachEvent extends Model
         return $this->belongsTo(Identity::class);
     }
 
+    public function source()
+    {
+        return $this->belongsTo(Source::class);
+    }
+
     /**
      * Override the factory method to use a custom factory class
      */

@@ -27,6 +27,9 @@ php artisan key:generate
 # Serve the application
 php artisan serve
 
+# Run Migrations
+php artisan migrate
+
 # Call DB seeds for dummy data
 php artisan db:seed
 ```

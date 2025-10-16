@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(LeakedDataTypesSeeder::class);
+        $this->call([LeakedDataTypesSeeder::class, SourceSeeder::class]); //Calling both Leaked Data Type and Sources Seeders
         Identity::factory()->count(5)->domain()->create();
         Identity::factory()->count(5)->individual()->create();
         BreachEvent::factory()->count(4000)->create();

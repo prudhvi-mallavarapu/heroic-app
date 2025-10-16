@@ -38,7 +38,7 @@
                                         </div>
                                     </td>
                                     <td>{{ $record->identity->name }}</td>
-                                    <td>{{ $record->source }}</td>
+                                    <td>{{ $record->source->name }}</td>
                                     <td class="text-nowrap">{{ $record->reported_on }}</td>
                                     <td>
                                         <div class="d-flex align-items-center gap-2">

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('breach_events', function (Blueprint $table) {
             $table->id();
             $table->foreignId('identity_id')->constrained('identities')->restrictOnDelete();
-            $table->string('source');
+            $table->foreignId('source_id')->constrained('sources')->restrictOnDelete();
             $table->date('reported_on');
             $table->enum('severity', ['L', 'M', 'H', 'C'])->default('L')->comment('L:Low, M:Medium, H:High, C:Critical'); // Default Low
             $table->enum('status', ['R', 'U'])->default('U')->comment('R:Resolved, U:Unresolved'); // Default Unresolved
@@ -30,7 +30,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('breach_events', function (Blueprint $table) {
-            $table->dropForeign(['identity_id']);
+            $table->dropForeign(['identity_id', 'source_id']);
         });
         Schema::dropIfExists('breach_events');
     }
