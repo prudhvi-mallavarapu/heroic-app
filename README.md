@@ -2,9 +2,11 @@
 
 **Author** - Prudhvi Raju Mallavarapu
 
-## **Laravel Framework Version** - 12.34.0
+### **Laravel Framework Version** - 12.34.0
 
-## **PHP Version** - 8.2.29
+### **PHP Version** - 8.2.29
+
+### Theme Used : https://themewagon.github.io/kaiadmin-lite/
 
 ### 🚀 Getting Started
 
@@ -30,6 +32,6 @@ php artisan serve
 # Run Migrations
 php artisan migrate
 
-# Call DB seeds for dummy data
+# Call DB seeds for dummy data (this will dump 4k breach events, you can customize this in seeders)
 php artisan db:seed
 ```
