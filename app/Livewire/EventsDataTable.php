@@ -14,6 +14,7 @@ class EventsDataTable extends Component
     public $selectedIdentity = 'all';
     protected $paginationTheme = 'bootstrap';
     protected $scrollToTopOnPagination = false;
+    protected $paginationPageName = 'eventsPage';
 
     // Reset page when filtering
     protected $updatesQueryString = ['selectedIdentity'];
@@ -43,7 +44,7 @@ class EventsDataTable extends Component
 
         return view('livewire.events-data-table', [
             'records' => $records,
-            'totalRecords' => $records->count()
+            'totalRecords' => $records->total()
         ]);
     }
 }

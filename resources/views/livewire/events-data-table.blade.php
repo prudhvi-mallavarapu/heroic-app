@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">
-                    All Breach Events {{ $totalRecords > 0 ? '(' . $records->count() . ')' : '' }}
+                    All Breach Events {{ $totalRecords > 0 ? '(' . $totalRecords . ')' : '' }}
                 </h4>
             </div>
             <div class="card-body">
@@ -26,7 +26,7 @@
                         </thead>
                         <tbody>
                             @foreach ($records as $record)
-                                <tr>
+                                <tr wire:key="record-{{ $record->id }}">
                                     <td>{{ $record->identity->name }}</td>
                                     <td>{{ $record->source->name }}</td>
                                     <td class="text-nowrap">{{ $record->reported_on }}</td>
@@ -52,9 +52,11 @@
                                     <td><button class="btn btn-black btn-border">Details</button></td>
                                 </tr>
                             @endforeach
-                            {{ $records->links('pagination::bootstrap-5') }}
                         </tbody>
                     </table>
+                    <div class="mt-2">
+                        {{ $records->links(data: ['scrollTo' => false]) }}
+                    </div>
                 </div>
             </div>
         </div>

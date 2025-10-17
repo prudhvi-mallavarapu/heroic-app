@@ -17,7 +17,7 @@
     <!-- Events Data Table -->
     <div class="row mt-3">
         <div class="col-12">
-            <livewire:events-data-table />
+            <livewire:events-data-table wire:key="events-{{ now()->timestamp }}" />
         </div>
     </div>
 

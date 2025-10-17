@@ -17,7 +17,7 @@ class IdentityFilter extends Component
 
     public function updatedSelectedIdentity($value)
     {
-        // Emit event to other components
+        // Dispatch event to other components
         $this->dispatch('identityChanged', identity: $value);
     }
 
