@@ -10,7 +10,6 @@
 </div>
 
 @push('scripts')
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
     <script>
         document.addEventListener('livewire:initialized', () => {
             const canvas = document.getElementById('breachTrendChart');

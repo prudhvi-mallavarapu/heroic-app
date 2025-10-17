@@ -51,6 +51,12 @@ class ResolutionProgress extends Component
         $this->totalSources        = $aggregates->total_sources ?? 0;
         $this->resolvedCount       = $aggregates->resolved_count ?? 0;
         $this->unresolvedCount     = $aggregates->unresolved_count ?? 0;
+
+        // Call Progress chart update
+        $this->dispatch('updateProgressChart', [
+            'resolved' => $this->resolvedCount,
+            'total' => $this->totalRecords,
+        ]);
     }
 
     public function render()

@@ -3,9 +3,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex align-items-center gap-4">
-                    <div>
-                        progress Indicator
-                    </div>
+                    <livewire:progress-chart />
                     <div>
                         <h5 class="fs-5 fw-bold m-0 p-0">Resolution Progress</h5>
                         <p class="text-muted">Based on breach resolution progress. {{ $resolvedCount }} of

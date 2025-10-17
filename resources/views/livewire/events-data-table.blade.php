@@ -7,6 +7,24 @@
                 </h4>
             </div>
             <div class="card-body">
+                <div class="my-2 d-flex justify-content-end align-items-center">
+                    <div class="form-group w-50">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white">
+                                <i class="fas fa-search text-muted"></i>
+                            </span>
+                            <input type="search" class="form-control"
+                                placeholder="Search Identities, Sources or breach details"
+                                wire:model.live.debounce.250ms="search">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn bg-light"> <i class="fas fa-filter"></i> Filters</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn bg-light"> <i class="fas fa-download"></i> Export</button>
+                    </div>
+                </div>
                 <div class="card-sub">
                     Data Overview
                 </div>
