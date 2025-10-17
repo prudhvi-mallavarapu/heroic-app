@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class LeakedDataType extends Model
 {
+    protected $hidden = ['pivot'];
+
     const DataTypeIcons = [
         'Emails' => 'far fa-envelope',
         'Usernames' => 'fas fa-lock',
