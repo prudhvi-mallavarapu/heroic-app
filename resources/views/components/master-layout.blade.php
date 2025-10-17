@@ -68,7 +68,7 @@
             <div class="container">
                 <div class="page-inner">
                     <div class="page-header">
-                        <h4 class="page-title">Dashboard</h4>
+                        <h4 class="page-title">Breach Monitoring</h4>
                         <ul class="breadcrumbs">
                             <li class="nav-home">
                                 <a href="#">

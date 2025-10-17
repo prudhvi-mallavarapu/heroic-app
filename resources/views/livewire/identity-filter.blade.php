@@ -1,8 +1,12 @@
 <div class="card">
     <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex justify-content-start align-items-center gap-4">
-                <div>
+        <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 gap-md-0">
+
+            <!-- Left Section: Select + Label -->
+            <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3 gap-md-4 w-100">
+                <!-- Select Dropdown -->
+                <div class="flex-shrink-0" style="min-width: 200px;">
                     <select class="form-select" wire:model.change="selectedIdentity">
                         <option value="all">All Identities</option>
                         @foreach ($identities as $identity)
@@ -10,15 +14,21 @@
                         @endforeach
                     </select>
                 </div>
-                <div>
-                    <h5 class="h5 m-0">
+
+                <!-- Label + Description -->
+                <div class="text-start">
+                    <h5 class="h5 mb-0">
                         <b>Filter by Identity</b>
                     </h5>
-                    <span class="text-muted m-0">Filter breach data by identity</span>
+                    <small class="text-muted">Filter breach data by identity</small>
                 </div>
             </div>
-            <div>
-                <button class="btn bg-light"><i class="icon-settings"></i>&nbsp;Manage Identities</button>
+
+            <!-- Right Section: Button -->
+            <div class="mt-2 mt-md-0 flex-shrink-0">
+                <button class="btn bg-light">
+                    <i class="icon-settings"></i>&nbsp;Manage Identities
+                </button>
             </div>
         </div>
     </div>

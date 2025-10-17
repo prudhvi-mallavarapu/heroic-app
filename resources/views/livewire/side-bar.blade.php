@@ -3,8 +3,8 @@
      <div class="sidebar-logo">
          <!-- Logo Header -->
          <div class="logo-header" data-background-color="dark">
-             <a href="index.html" class="logo">
-                 <img src="assets/img/kaiadmin/logo_light.svg" alt="navbar brand" class="navbar-brand" height="20" />
+             <a href="{{ route('home') }}" class="logo">
+                 <img src="assets/img/logo.png" alt="navbar brand" class="navbar-brand" height="48" />
              </a>
              <div class="nav-toggle">
                  <button class="btn btn-toggle toggle-sidebar">
@@ -34,7 +34,7 @@
                      @php
                          $subMenuId = 'submenu-' . $index;
                      @endphp
-                     <li class="nav-item {{ $menuItem['title'] == 'Breached Monitoring' ? 'active' : '' }}">
+                     <li class="nav-item {{ $menuItem['title'] == 'Breach Monitoring' ? 'active' : '' }}">
                          <a @if ($menuItem['hasSubmenu']) data-bs-toggle="collapse" href="#{{ $subMenuId }}" @endif
                              href="{{ $menuItem['link'] }}">
                              <i class="{{ $menuItem['iconClass'] }}"></i>
