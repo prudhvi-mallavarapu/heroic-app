@@ -47,7 +47,9 @@
                                 <tr wire:key="record-{{ $record->id }}">
                                     <td>{{ $record->identity->name }}</td>
                                     <td>{{ $record->source->name }}</td>
-                                    <td class="text-nowrap">{{ $record->reported_on }}</td>
+                                    <td class="text-nowrap">
+                                        {{ $record->reported_on ? \Carbon\Carbon::parse($record->reported_on)->format('d-m-Y') : '-' }}
+                                    </td>
                                     <td>
                                         <div class="d-flex align-items-center gap-2">
                                             <i
